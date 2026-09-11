@@ -1,0 +1,21 @@
+{
+  "name": "cmo-manga-name",
+  "version": "0.1.4-trial",
+  "description": "漫画記事・ショート動画の脚本、演出、人物設計、4列ネームを制作する試用スキル。",
+  "author": {
+    "name": "CMO AI Pro"
+  },
+  "repository": "https://github.com/k4415/cmo-manga-name",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "漫画ネーム制作",
+    "shortDescription": "脚本・演出・人物設計から4列ネームまで",
+    "longDescription": "商品とターゲットの意図を汲み取り、漫画記事やショート動画のネームを相談しながら制作します。",
+    "developerName": "CMO AI Pro",
+    "category": "Creativity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "漫画記事のネームを、ストーリーと会話から相談したいです。"
+    ]
+  }
+}

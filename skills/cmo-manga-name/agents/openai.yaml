@@ -1,0 +1,4 @@
+interface:
+  display_name: "CMO 漫画ネーム制作"
+  short_description: "意図を汲み取り、漫画記事・60秒ショート動画の脚本から演出・人物設計まで制作"
+  default_prompt: "$cmo-manga-name を使い、商品とターゲットに合う漫画ネームを相談しながら作成してください。"
