@@ -1,17 +1,15 @@
-# AIスキルタブの掲載原稿（配布開始時に使用）
+# AIスキルタブの掲載原稿
 
 2026-09-11／0.1.4-trial
-
-管理者へ：現在は配布準備中です。下記の取得先はRelease一覧であり、公開済みZIPの直リンクではありません。配布を開始する時に、利用者の権限で開ける取得先を設定してください。非公開GitHubの権限がない方へは、別途ZIPを渡せる導線が必要です。既存の案内が5列になっている場合は、4列とコピー範囲の説明を照合して修正します。
-
----
 
 漫画ネーム制作 AIスキル（Claude Code／Codex向け）
 
 商品・ターゲット・伝えたいことから、漫画記事／漫画ショート動画の脚本・演出・人物設計を相談しながら作れます。
 
 配布版：0.1.4-trial（試用版）
-取得先：https://github.com/k4415/cmo-manga-name/releases
+導入案内：https://github.com/k4415/cmo-manga-name
+ZIP：https://github.com/k4415/cmo-manga-name/releases/download/v0.1.4-trial/cmo-manga-name-0.1.4-trial.zip
+GitHubアカウントなしでダウンロードできます。
 
 1. 案内されたZIPを取得して展開。
 2. 同梱READMEの「導入ガイド」にある依頼文をAIエージェントへ渡す。
