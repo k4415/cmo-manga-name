@@ -62,6 +62,10 @@ class ExportTest(unittest.TestCase):
   d=self.base(); name='あ'*21; d['characters']=[name]; d['rows'][0][1]=name; d['rows'][0][2]=name+'「確認」'; d['panels'][0]['text_map']=[[1]]; self.run_case(d,False)
  def test_note_marker_mismatch(self):
   d=self.base(); d['rows'][0][2]='澪「※1確認します」\n注釈：※2補足'; d['panels'][0]['annotation_map']=[{'note_line':2,'target_lines':[1]}]; self.run_case(d,False)
+ def test_na_leading_bracket(self):
+  d=self.base(); d['rows'][0][2]='澪「確認します」\nNA：「学ぶ」より「遊ぶ」'; d['panels'][0]['text_map']=[[1,2]]; self.run_case(d,False)
+ def test_na_corner_bracket_ok(self):
+  d=self.base(); d['rows'][0][2]='澪「確認します」\nNA：『学ぶ』より『遊ぶ』'; d['panels'][0]['text_map']=[[1,2]]; self.run_case(d)
  def test_video_missing_timing(self):
   d=self.base(); d['media']='short_video'; self.run_case(d,False)
  def test_readback_used_range(self):

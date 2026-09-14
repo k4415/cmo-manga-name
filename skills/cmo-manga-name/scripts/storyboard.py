@@ -132,7 +132,10 @@ def validate(data):
         note_lines, marked_lines = set(), set()
         for line_no, line in enumerate(lines, 1):
             if line.startswith(('NA：', 'SE：', '注釈：')):
-                require(line.split('：', 1)[1].strip(), label+'空の文字要素があります')
+                body = line.split('：', 1)[1].strip()
+                require(body, label+'空の文字要素があります')
+                # 取込側が NA「本文」形式と解釈して先頭「と末尾」を落とすため、本文を「で始めない。
+                require(not body.startswith('「'), label+f'C列{line_no}行目: NA・SE・注釈の本文を「で始めないでください（取込で括弧が除去されます）。『』を使ってください')
             else:
                 match = re.fullmatch(r'([^「」（）]+)(?:「(.+)」|（(.+)）)', line)
                 require(match is not None, label+f'C列{line_no}行目の記法が未対応です')
