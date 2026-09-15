@@ -2,12 +2,12 @@
 name: cmo-manga-name
 description: Use when creating or revising 漫画記事・漫画ショート動画の広告ネーム for CMO AI Pro, including script consultation, character design, and a user's Google Sheets storyboard. Also use when the user invokes cmo-manga-name to continue a draft.
 metadata:
-  version: "0.1.5-trial"
+  version: "0.1.6-trial"
 ---
 
 # CMO AI Pro 漫画ネーム制作
 
-最終更新: 2026-09-14。試用版。ユーザーの訴求意図から場面と会話を作り、脚本調整後に演出・キャラクター設計・取込用4列へ仕上げる。日本語で対話する。
+最終更新: 2026-09-15。試用版。ユーザーの訴求意図から場面と会話を作り、脚本調整後に演出・キャラクター設計・取込用4列へ仕上げる。日本語で対話する。
 
 ## 最初に行うこと
 
