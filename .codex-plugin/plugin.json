@@ -1,7 +1,7 @@
 {
   "name": "cmo-manga-name",
-  "version": "0.1.6-trial",
-  "description": "漫画記事・ショート動画の脚本、演出、人物設計、4列ネームを制作する試用スキル。",
+  "version": "0.1.7-beta",
+  "description": "漫画記事・ショート動画の脚本、演出、人物設計、4列ネームを制作する無料・商用利用可のベータ版スキル。利用条件はLICENSE参照。",
   "author": {
     "name": "CMO AI Pro"
   },
