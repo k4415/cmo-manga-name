@@ -1,21 +1,21 @@
 # 管理者向け：配布開始と更新
 
-2026-09-11／0.1.4-trial
+2026-09-16／0.1.7-beta
 
 ## 配布方式
 
 GitHubを正本と版管理に使い、指定版のZIPを配布する。利用者は自分のシートを使い続ける。シートのAIスキルタブは案内の入口とし、スキル全文を複数箇所で維持しない。
 
-ユーザーの公開指示に基づき、リポジトリと0.1.4-trialのPrereleaseを公開する。利用者にはREADMEまたは固定版ZIPのURLを渡す。GitHubアカウントは不要。オープンソースライセンスの付与は行わず、READMEに試験利用の範囲を案内する。
+商用制作に無料で使える0.1.7-betaのPrereleaseを配布する。利用者にはREADMEまたは固定版ZIPのURLを渡す。GitHubアカウントは不要。独自利用条件をLICENSEに明記する。ベータ版であることと商用利用の可否を混同しない。外部サービス料金は別途必要。
 
-## 試験配布で確認すること
+## 配布前・利用者の受入で確認すること
 
 - 両エージェントで新規導入から制作・調整まで行う。
 - 利用者自身のシートコピーへ保存し、A:D読戻しを確認する。
 - 接続なしでTSVを受け取り、改行を含むセルを取り込めることを確認する。
 - CMO AI Proへ実際に引き継ぎ、人物・文字・前後関係を確認する。
 - 初利用者が導入案内だけで開始できるか確認する。
-- 試験利用者からのフィードバックは提供元で受け取り、継続配布時の利用条件を整理する。オープンソースライセンスは未設定。
+- フィードバックは提供元で受け取り、公開Issueには顧客情報・認証情報・非公開原稿を書かせない。スキル自体の再配布・販売の相談はLICENSEの窓口を案内する。
 - 採用済みの独自見本を同梱する場合は人間が内容を確認する。形式試験の短いfixtureを品質見本として使わない。
 - sheet-entry.mdを必要なシートへ掲載する。既存シートの5列表記が残っていれば4列の案内と整合させる。
 
@@ -27,8 +27,14 @@ GitHubを正本と版管理に使い、指定版のZIPを配布する。利用�
 
 ## ZIPの構成
 
-README.md、CHANGELOG.md、VERSION、.codex-plugin、.claude-plugin、skills、および利用者向けdocs（install/quickstart/update/troubleshooting/verification）を同梱する。SHA256SUMS.txtは同梱ファイルの相対パスとSHA-256を持つ。
+README.md、CHANGELOG.md、VERSION、LICENSE、.codex-plugin、.claude-plugin、skills、および利用者向けdocs（install/quickstart/update/troubleshooting/verification）を同梱する。スキルの直接設置後にも利用条件が残るよう、skills/cmo-manga-name/LICENSEへルートLICENSEと同一内容を同梱する。SHA256SUMS.txtは自身を除く同梱ファイルの相対パスとSHA-256を持つ。配布ページのSHA256SUMS.txtにはZIP自体のハッシュを記載する。
 
 AGENTS.md、管理者向け文書、tests、.git、キャッシュ、検証用の実案件データは利用者向けZIPに含めない。ZIPの展開先が一つのcmo-manga-nameフォルダになることを確認する。GitHubのSource code ZIPはリポジトリ全体なので、利用者には添付の配布専用ZIPを案内する。
 
-外部に残したZIPのSHA-256と全ファイルを照合し、ZIP内の相対リンク、SKILL.mdの版、13ファイルのスキル一式が揃っていることを確認する。
+外部に残したZIPのSHA-256と全ファイルを照合し、ZIP内の相対リンク、SKILL.mdの版、LICENSEを含む14ファイルのスキル一式が揃っていることを確認する。プラグイン版、VERSION、README、docsの案内を同じ配布版へ揃える。
+
+## コミット時のメール保護
+
+このリポジトリで今後作成するコミットはGitHubが提供するnoreplyアドレスを使う。既存のコミット履歴、公開タグ、旧ZIPは書き換えない。個別のメールアドレスを文書や配布ZIPへ記載しない。
+
+GitHubのSettings → Emailsでメール非公開と個人メールを含むコマンドラインpushの防止を確認する。リポジトリを新しくcloneした環境でも、コミット前にGitのuser.emailがGitHubのnoreplyアドレスであることを確認する。古い履歴に含まれるメールは、この設定だけでは削除されない。
